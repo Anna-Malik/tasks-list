@@ -21,6 +21,7 @@ const render = () => {
         <li 
         ${task.done ? "style=\"text-decoration: line-through\"" : ""}
         >
+        <button class="js-done">Zrobione?</button>
         <button class="js-remove">Usuń zadanie</button>
         ${task.content}
         </li>
@@ -31,12 +32,22 @@ const render = () => {
 
     const removeButtons = document.querySelectorAll(".js-remove");
 
-    removeButtons.forEach((removeButton, index) => {
+    removeButtons.forEach((removeButton, taskIndex) => {
         removeButton.addEventListener("click", () => {
-            removeTask(index);
+            removeTask(taskIndex);
             
         });
     });
+
+    const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+    toggleDoneButtons.forEach((toggleDoneButton, index) => {
+        toggleDoneButton.addEventListener("click", () => {
+            toggleTaskDone(index);
+            
+        });
+    });
+
 }
 
 const addNewTask = (newTaskContent) => {
@@ -51,6 +62,12 @@ const removeTask = (taskIndex) => {
 
 tasks.splice(taskIndex, 1);
             render();
+}
+const toggleTaskDone = (taskIndex) => {
+
+    tasks [taskIndex].done = !tasks[taskIndex].done;
+    render();
+
 }
 
 const onFormSubmit = (event) => {

@@ -1,4 +1,4 @@
-# Tasks lists
+# Tasks lists [PL language]
 
 ## My first tasks list which is based on YouCode course.
 You can add new tasks, mark them as done and then remove.

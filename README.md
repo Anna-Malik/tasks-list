@@ -8,6 +8,6 @@ HTML,
 Java Script,
 CSS (BEM, GRID)
 
-### Check demo: https://github.com/Anna-Malik/tasks-list.git
+### Check demo: https://anna-malik.github.io/tasks-list/
 
 ![tasks-list](images/task-list.gif)

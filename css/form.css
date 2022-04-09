@@ -1,10 +1,8 @@
 .form {
-
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr auto;
     grid-gap: 25px;
-
 }
 
 @media (max-width: 767px){
@@ -12,10 +10,8 @@
 grid-template-columns: 1fr;
 }}
 
-
 .form__input {
-
     padding: 5px;
+    border: solid 1.5px;
     border-color: #ddd;
-    
 }

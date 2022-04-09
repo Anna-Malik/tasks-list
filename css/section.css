@@ -1,11 +1,9 @@
 .section__container {
-
     max-width: 900px;
     background-color: white;
     padding: 10px;
     margin: 10px auto;
     box-shadow: 10px 9px 26px -21px rgba(119, 119, 129, 0.26);
-
 }
 
 .section__button {
@@ -17,24 +15,20 @@
 }
 
 .section__button:hover {
-
     background-color: rgb(11, 171, 171);
 }
 
 .section__button:active {
-
-    background-color: rgb(11, 201, 201)
+    background-color: hsl(180, 88%, 45%);
 }
 
 .section__header {
-
     padding: 10px;
     margin: 0;
     border-bottom: solid 2px rgb(232, 232, 232);
 }
 
 .section__style {
-
     padding: 25px;
 }
 

@@ -11,8 +11,7 @@
     border: none;
     background-color: teal;
     color: white;
-    font-size: 15px;
-    
+    font-size: 15px; 
 }
 
 .section__button:hover {
@@ -38,8 +37,7 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    grid-gap: 20px;
-    
+    grid-gap: 20px; 
 }
 
 @media (max-width: 767px) {
@@ -56,15 +54,13 @@
     flex-wrap: wrap;
 }
 
-
 .section__buttons {
     border: none;
     background-color: transparent;
     color: teal;
     justify-items: flex-end;
     transition: 0.5s;
-    margin: 0 0 0 20px;
-    
+    margin: 0 0 0 20px;  
 }
 
 @media (max-width: 767px) {

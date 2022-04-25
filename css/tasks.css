@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.tasks__item--hidden {
+    display: none;
+}
+
 .tasks__button {
     border: none;
     color: white;
@@ -35,6 +39,7 @@
 
 .tasks__button--toggleDone:hover {
     background-color: rgb(34, 152, 34);
+    transition: 0.5s;
 }
 
 .tasks__button--remove {
@@ -43,4 +48,6 @@
 
 .tasks__button--remove:hover {
     background-color: rgb(220, 86, 113);
+    transition: 0.5s;
 }
+

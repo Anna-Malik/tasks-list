@@ -12,9 +12,12 @@
     background-color: teal;
     color: white;
     font-size: 15px;
+    
 }
 
 .section__button:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
     background-color: rgb(11, 171, 171);
 }
 
@@ -22,13 +25,69 @@
     background-color: hsl(180, 88%, 45%);
 }
 
+.section__mainHeader {
+    padding: 10px 10px 20px;
+    margin: 0;
+    border-bottom: solid 2px rgb(232, 232, 232);
+
+}
 .section__header {
     padding: 10px;
     margin: 0;
     border-bottom: solid 2px rgb(232, 232, 232);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    grid-gap: 20px;
+    
+}
+
+@media (max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
+    }}
+
+
+.section__title {
+    width: auto;
 }
 
 .section__style {
-    padding: 25px;
+    padding-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.section__buttons {
+    border: none;
+    background-color: transparent;
+    color: teal;
+    justify-items: flex-end;
+    transition: 0.5s;
+    margin: 0 0 0 20px;
+    
+}
+
+@media (max-width: 767px) {
+    .section__buttons {
+        flex-basis: 100%;
+        padding: 10px;
+    }}
+
+.section__buttons:hover {
+    color: rgb(11, 171, 171);
+    transition: 0.5s;
+}
+
+.section__buttons:active {
+    color: hsl(180, 88%, 45%);
+}
+
+.section__buttons:disabled {
+    color: #ccc;
 }
 

@@ -47,11 +47,6 @@
         grid-template-columns: 1fr;
     }}
 
-
-.section__title {
-    width: auto;
-}
-
 .section__style {
     padding-top: 20px;
 }

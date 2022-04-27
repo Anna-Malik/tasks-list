@@ -1,6 +1,5 @@
 {
     let tasks = [];
-
     let doneTasksHidden = false;
 
     const markAllTasksDone =() => {
@@ -8,17 +7,13 @@
             ...task,
             done: true,
         }));
-
         render();
     }
-
     const toggleHideDoneTasks = () => {
         doneTasksHidden = !doneTasksHidden;
         render();
     }
-
     const bindRemoveEvents = () => {
-
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, taskIndex) => {
@@ -28,9 +23,7 @@
             });
         });
     };
-
     const bindToggleDoneEvents = () => {
-
         const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
         toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
@@ -47,36 +40,25 @@
             buttonsElement.innerHTML = "";
             return;
         }
-
         buttonsElement.innerHTML =
         `<button class = "section__buttons js-toggleHideDoneTasks">
             ${doneTasksHidden ? "Pokaż" : "Ukryj"} ukończone
         </button>
-
-        <button class="section__buttons js-markAllDone"
-        ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+        <button class="section__buttons js-markAllDone"${tasks.every(({ done }) => done) ? "disabled" : ""}>
         Ukończ wszystkie
         </button>`
     };
-
     const bindButtonsEvents = () => {
-
      const markAllDoneButton = document.querySelector(".js-markAllDone");
-
      if (markAllDoneButton) {
         markAllDoneButton.addEventListener("click", markAllTasksDone);
     }
     const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
-
     if (toggleHideDoneTasksButton) {
         toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
-    }
-    }
-
+    }};
     const renderTasks = () => {
-
         const taskToHTML = task =>
-
         `<li class="tasks__item${task.done && doneTasksHidden ? " tasks__item--hidden" : ""} js-task">
         <button class="tasks__button tasks__button--toggleDone js-toggleDone">${task.done ? "✓" : ""}</button>
 
@@ -87,31 +69,22 @@
          🗑 </button>
         </li>
         `;
-
         const tasksElement = document.querySelector(".js-tasks");
         tasksElement.innerHTML = tasks.map(taskToHTML).join("");
-
-        }
-
-
+        };
     const addNewTask = (newTaskContent) => {
-
         tasks = [...tasks, { content: newTaskContent} ];
             
         render();
     };
-
     const removeTask = (taskIndex) => {
-
         tasks = [
             ...tasks.slice(0, taskIndex),
             ...tasks.slice(taskIndex +1),
         ];
-
         render();
     }
     const toggleTaskDone = (taskIndex) => {
-
         tasks = [
             ...tasks.slice(0, taskIndex),
             {
@@ -120,21 +93,15 @@
             },
             ...tasks.slice(taskIndex + 1)
         ];
-        
         render();
-
-    }
-
+    };
     const render = () => {
         renderTasks();
         bindRemoveEvents();
         bindToggleDoneEvents ();
-
         renderButtons();
         bindButtonsEvents();
-
     }
-    
     const onFormSubmit = (event) => {
         event.preventDefault();
         
@@ -142,15 +109,11 @@
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
         
         if (newTaskContent !=="") {
-
             addNewTask(newTaskContent);
             newTaskElement.value="";
         }
-
         newTaskElement.focus();
-
     };
-
     const init = () => {
         render();
 
@@ -158,9 +121,6 @@
 
         form.addEventListener("submit", (onFormSubmit)
         )
-
     };
-
     init();
-
 }

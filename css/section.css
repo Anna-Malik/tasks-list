@@ -82,6 +82,7 @@
 
 .section__buttons:disabled {
     color: #ccc;
+    cursor: not-allowed;
 }
 
 
